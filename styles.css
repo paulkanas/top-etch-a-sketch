@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container {
+    display: grid;
+    margin-top: 30px;
+}
+
+.div {
+    aspect-ratio: 1/1;
+}
+
+button {
+    margin-top: 20px;
+}
