@@ -1,6 +1,8 @@
 const container = document.querySelector('#container');
 const button = document.querySelector("#Start");
 const clear = document.querySelector("#Clear");
+let trans = 0;
+let r = 100;
 
 let no = 16;
 let frame = (700)/no;
@@ -22,15 +24,16 @@ function makeHoverable() {
 let divvies = document.querySelectorAll('.div');
 for (let dives of divvies) {
     dives.addEventListener("mouseover", () => {
-        dives.classList.add('hover');
-        let rainbow = [Math.floor(Math.random() * 255)];
-        let rainbow2 = [Math.floor(Math.random() * 255)];
-        let rainbow3 = [Math.floor(Math.random() * 255)];
-        dives.style.backgroundColor = `rgb(${rainbow}, ${rainbow2}, ${rainbow3})`;
-    }
-        )
-    }
-}
+        // let rainbow = [Math.floor(Math.random() * 255)];
+        // let rainbow2 = [Math.floor(Math.random() * 255)];
+        // let rainbow3 = [Math.floor(Math.random() * 255)];
+        // dives.style.backgroundColor = `rgb(${rainbow}, ${rainbow2}, ${rainbow3})`;
+        // dives.style.backgroundColor = 'rgb(255, 255, 255)';
+        
+        dives.style.backgroundColor = "rgb(0, 0, 0)";
+        dives.style.opacity = Number(dives.style.opacity) + 0.1;
+    })
+}}
 
 function clearGrid() {
     var divs = document.querySelectorAll('.div');
